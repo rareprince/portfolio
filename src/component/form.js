@@ -11,26 +11,27 @@ export default function Form(initial = {}) {
     }
     setInput({ ...input, [name]: value });
   };
-  const resetForm=()=> {
+  const resetForm = () => {
     setInput(initial);
-  }
-  const clearForm =()=> {
-  
-  }
+  };
+  const clearForm = () => {};
 
   const handleSubmit = (event) => {
-event.preventDefault()
-  }
+    event.preventDefault();
+  };
 
   return (
-    <div>
-      <hi className="header">GITHUB PORTFOLIO</hi>
+    <div className="form">
+      <h1 className="header">GITHUB PORTFOLIO</h1>
       <p className="para">
         Enter your Github username to access your portfolio.
       </p>
-      <form className="username" onSubmit = {handleSubmit}>
-        <label htmlFor="github" className="label">Username:</label>
-        <input className="input"
+      <form className="username" onSubmit={handleSubmit}>
+        <label htmlFor="github" className="label">
+          Username:
+        </label>
+        <input
+          className="input"
           id="github"
           type="text"
           name="github"
